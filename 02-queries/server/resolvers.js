@@ -1,4 +1,4 @@
-import { Job } from './db.js'
+import { Company, Job } from './db.js'
 
 export const resolvers = {
   Query: {
@@ -6,11 +6,8 @@ export const resolvers = {
   },
 
   Job: {
-    company: () => {
-      return {
-        id: 'fake',
-        name: 'Fake Inc.',
-      }
+    company: (job) => {
+      return Company.findById(job.companyId)
     },
   },
 }

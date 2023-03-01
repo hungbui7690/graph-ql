@@ -1,8 +1,7 @@
 /*
   JOB-COMPANY ASSOCIATION
   
-  (1) schema > test: company will be null > we need to mark company as mandatory 
-  (2) modify resolvers as well
+  (1) resolvers
 
 */
 
