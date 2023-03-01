@@ -1,8 +1,9 @@
 /*
-  GraphQL OVER HTTP
-  - Schema Pooling: picture 
-  - continuously sending requests to server to see if there is any change > turn off
-  - picture: request-vs-response
+  GraphQL Client: 
+  - as we see in last lectures > the client sends POST request to server with the body contains data 
+
+  (1) put the old codes in server/ 
+  (2) create client/ > we will build the client to send HTTP request to server
 
 */
 
