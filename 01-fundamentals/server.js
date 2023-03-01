@@ -1,16 +1,28 @@
 /*
-  - create package.json (manually)
-  - npm i apollo-server graphql
-  - install extension
+  RESOLVER FUNCTIONS
+  -
+
+
 */
 
-import { gql } from 'apollo-server'
+import { ApolloServer, gql } from 'apollo-server'
 
-// gql function verifies the graphql syntax
 const typeDefs = gql`
   type Query {
     greeting: String
   }
 `
 
-console.log(typeDefs)
+// (1) create resolvers function
+// this needs to match typeDefs
+// > greeting now is a function that returns String
+const resolvers = {
+  Query: {
+    greeting: () => 'Hello World',
+  },
+}
+
+// (2) create graphql server
+const server = new ApolloServer({ typeDefs, resolvers })
+const serverInfo = await server.listen({ port: 9000 })
+console.log(`Server is running at ${serverInfo.url}`)
