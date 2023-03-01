@@ -1,15 +1,11 @@
 /*
-  CUSTOM TYPE DEFINITIONS
-  - have a look at the front-end, we see that we need the job info, which contains: id, title, description...
+  DATABASE RESOLVERS
   
-  (1) schema.graphql
-  > scalar type > docs
-  > ! === mandatory
-  > jobs: [Job!] === array of job + required
+  (1) modify resolvers.js
+    > must match with type defs > otherwise, error
+    > ! == mandatory > description returns null if no value since not mandatory
+    > now, function in resolver return direct data > we can use async like we work with db (next lecture)
 
-  (2) after change schema, we need to change resolvers as well
-
-  (3) go to Apollo Client & test > pic: test-custom-type
 
 */
 
