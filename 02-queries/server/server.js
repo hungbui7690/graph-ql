@@ -2,10 +2,10 @@
   DATABASE RESOLVERS
   
   (1) modify resolvers.js
-    > must match with type defs > otherwise, error
-    > ! == mandatory > description returns null if no value since not mandatory
-    > now, function in resolver return direct data > we can use async like we work with db (next lecture)
-
+    > we can use async to return promise
+    > check data/ > fakebase > use local json file as database > check file db.js
+    > we can see that in data/jobs.json > there is "companyId" for each object 
+    > but when we test, it just return 3 fields as we defined in schema 
 
 */
 
