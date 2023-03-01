@@ -1,7 +1,7 @@
 /*
-  FIELD SELECTION
-  - in the client, we can select any fields we want > we don't need to select all the fields that we defined in schema > we can select "title" only 
+  JOB-COMPANY ASSOCIATION
   
+  (1) schema > test: company will be null
 
 */
 

@@ -1,11 +1,15 @@
 type Query {
-  # [job!]: array, required
   jobs: [Job!]
 }
 
+type Company {
+  id: ID!
+  name: String!
+}
+
 type Job {
-  # ! = mandatory
   id: ID!
   title: String!
+  company: Company # association
   description: String
 }
