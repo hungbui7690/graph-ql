@@ -2,10 +2,9 @@ import { Company, Job } from './db.js'
 
 export const resolvers = {
   Query: {
-    // 1st arg is always the parent === Query === root
-    // test in Apollo Client
-    job: (root, args) => {
-      console.log('args: ', args)
+    // since we don't use root param > _root
+    job: (_root, { id }) => {
+      return Job.findById(id)
     },
     jobs: () => Job.findAll(),
   },
