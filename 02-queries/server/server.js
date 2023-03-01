@@ -1,28 +1,25 @@
 /*
-  APOLLO SERVER FOR EXPRESS
-  - now, we need to add GRAPHQL support for our express server 
-    > npm install apollo-server-express graphql
-
-
-  (***)
-  - we will keep our schema definitions in schema.graphql
-  - we also create separated file for resolvers function
+  CUSTOM TYPE DEFINITIONS
+  - have a look at the front-end, we see that we need the job info, which contains: id, title, description...
   
+  (1) schema.graphql
+  > scalar type > docs
+  > ! === mandatory
+  > jobs: [Job!] === array of job + required
+
+  (2) after change schema, we need to change resolvers as well
+
+  (3) go to Apollo Client & test > pic: test-custom-type
+
 */
 
-// (1) used to read schema.graphql file > need to import from "fs/promise"
-import { readFile } from 'fs/promises'
-
-// (2)
 import { ApolloServer } from 'apollo-server-express'
-
 import cors from 'cors'
 import express from 'express'
-import { expressjwt } from 'express-jwt'
+import { expressjwt as expressJWT } from 'express-jwt'
 import jwt from 'jsonwebtoken'
 import { User } from './db.js'
-
-// (4)
+import { readFile } from 'fs/promises'
 import { resolvers } from './resolvers.js'
 
 const PORT = 9000
@@ -32,7 +29,7 @@ const app = express()
 app.use(
   cors(),
   express.json(),
-  expressjwt({
+  expressJWT({
     algorithms: ['HS256'],
     credentialsRequired: false,
     secret: JWT_SECRET,
@@ -50,16 +47,9 @@ app.post('/login', async (req, res) => {
   }
 })
 
-// (3) after this > create resolvers.js
 const typeDefs = await readFile('./schema.graphql', 'utf-8')
-
-// (5)
 const apolloServer = new ApolloServer({ typeDefs, resolvers })
-
-// (6) start server
 await apolloServer.start()
-
-// (7) expose graphql server as part of Express server
 apolloServer.applyMiddleware({ app, path: '/graphql' })
 
 app.listen({ port: PORT }, () => {

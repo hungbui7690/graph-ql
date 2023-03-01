@@ -1,3 +1,11 @@
 type Query {
-  greeting: String
+  # [job!]: array, required
+  jobs: [Job!]
+}
+
+type Job {
+  # ! = mandatory
+  id: ID!
+  title: String!
+  description: String
 }
