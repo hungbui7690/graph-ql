@@ -1,11 +1,7 @@
 /*
-  DATABASE RESOLVERS
+  FIELD SELECTION
+  - in the client, we can select any fields we want > we don't need to select all the fields that we defined in schema > we can select "title" only 
   
-  (1) modify resolvers.js
-    > we can use async to return promise
-    > check data/ > fakebase > use local json file as database > check file db.js
-    > we can see that in data/jobs.json > there is "companyId" for each object 
-    > but when we test, it just return 3 fields as we defined in schema 
 
 */
 
