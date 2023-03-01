@@ -10,6 +10,6 @@ type Company {
 type Job {
   id: ID!
   title: String!
-  company: Company # association
+  company: Company!
   description: String
 }
