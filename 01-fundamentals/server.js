@@ -1,14 +1,14 @@
 /*
-  QUERY LANGUAGE
-  - go to http://localhost:9000/ > will see the sandbox = one of GraphQL Client
-  - check pictures > graphql-client
+  GraphQL OVER HTTP
+  - Schema Pooling: picture 
+  - continuously sending requests to server to see if there is any change > turn off
+  - picture: request-vs-response
 
 */
 
 import { ApolloServer, gql } from 'apollo-server'
 
 const typeDefs = gql`
-  # this is default bts
   schema {
     query: Query
   }
