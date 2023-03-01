@@ -1,5 +1,8 @@
 /*
-  
+  (1) /graphql/queries.js
+  > check pic: we see that we hard code the id > we can create query variable 
+  > use that and put the this file
+
 */
 
 import { useState } from 'react'

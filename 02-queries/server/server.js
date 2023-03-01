@@ -1,9 +1,9 @@
 /*
-  QUERY ARGUMENTS
-  - Right now, if we click on each Job to see the details > Error
-  > JobDetails.js
+  QUERY VARIABLES
+  - Client App
 
-  (1) resolvers
+
+
 
 */
 
