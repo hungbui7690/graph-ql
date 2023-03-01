@@ -15,7 +15,6 @@ export async function getJobs() {
     }
   `
 
-  // (1) JobBoard.js
   const { jobs } = await request(GRAPHQL_URL, query)
   return jobs
 }

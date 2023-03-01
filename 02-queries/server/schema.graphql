@@ -1,4 +1,6 @@
 type Query {
+  # (1) resolvers
+  job(id: ID!): Job
   jobs: [Job!]
 }
 

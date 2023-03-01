@@ -1,6 +1,12 @@
 /*
-  REACT DATA FETCHING
-  - work on client (react)
+  QUERY ARGUMENTS
+  - Right now, if we click on each Job to see the details > Error
+  > JobDetails.js
+
+  (1) schema
+  (2) resolver 
+  (3) Test in Apollo Client (pic: test-args)
+    > turn off setting (pic: apollo-settings)
 
 */
 

@@ -1,5 +1,5 @@
 /*
-  (1) /graphql/queries.js
+  
 */
 
 import { useState } from 'react'
