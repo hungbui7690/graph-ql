@@ -1,11 +1,5 @@
 /*
-  > npm i graphql-request
-    - we don't need to write headers, http methods, parse JSON...
-
-  (1) create graphql/queries.js
-  
-
-  
+  (1) /graphql/queries.js
 */
 
 import { useState } from 'react'

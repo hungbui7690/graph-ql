@@ -1,5 +1,5 @@
 /*
-  REQUEST CLIENT
+  REACT DATA FETCHING
   - work on client (react)
 
 */
