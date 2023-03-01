@@ -1,7 +1,6 @@
 /*
-  JOB-COMPANY ASSOCIATION
-  
-  (1) resolvers
+  REQUEST CLIENT
+  - work on client (react)
 
 */
 
