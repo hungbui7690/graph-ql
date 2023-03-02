@@ -1,9 +1,14 @@
 /*
-  COMPANY-JOBS ASSOCIATION
+  OBJECT GRAPH NAVIGATION
+  - now, from job, we can get company > and in company, we can also get jobs
+  - though it does not make sense, but we still can do that in graphql > company -> job -> company (redundant) > but for fb, it is good, since if we check the model of facebook > we can check friends of a friend 
+    > pic: test-navigation
 
-  Client:
-  (1) graphql/queries.js
+  ERROR HANDLING
+  - if we stop server, then go to client > we will see a blank list > we need to handle this 
 
+  Client
+  (1) add catch block when calling getJobs() in useEffect() in JobBoard.js
 
 */
 

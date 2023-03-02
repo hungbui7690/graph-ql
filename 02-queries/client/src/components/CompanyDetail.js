@@ -21,8 +21,6 @@ function CompanyDetail() {
     <div>
       <h1 className='title'>{company.name}</h1>
       <div className='box'>{company.description}</div>
-
-      {/* (2) */}
       <h5 className='title is-5'>
         <JobList jobs={company.jobs} />
       </h5>
