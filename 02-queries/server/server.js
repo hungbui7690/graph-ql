@@ -2,12 +2,8 @@
   COMPANY-JOBS ASSOCIATION
 
   Client:
-  (1) CompanyDetails.js
+  (1) graphql/queries.js
 
-  Server:
-  (2) Schema
-  (4) Resolvers
-  (5) Test in Apollo Client
 
 */
 

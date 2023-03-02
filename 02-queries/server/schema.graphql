@@ -8,8 +8,6 @@ type Company {
   id: ID!
   name: String!
   description: String
-
-  # (2) association between Company and Jobs > 1 company have multiple Jobs
   jobs: [Job!]
 }
 

@@ -8,7 +8,13 @@ export async function getCompany(id) {
       company(id: $id) {
         id
         name
+
+        # (1) go to CompanyDetail.js
         description
+        jobs {
+          id
+          title
+        }
       }
     }
   `
