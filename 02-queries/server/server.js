@@ -1,9 +1,13 @@
 /*
-  QUERY VARIABLES
-  - Client App
+  EXERCISE: COMPANY QUERY
+  - now, in the detail job page, when we click on the link of company > error
+  - we need to fix it
+  > we need company name & description
 
-
-
+  (1) schema
+  (2) resolver
+  (3) test in Apollo Client
+  (4) React > graphql/queries.js
 
 */
 

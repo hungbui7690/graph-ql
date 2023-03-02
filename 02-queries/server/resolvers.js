@@ -2,15 +2,14 @@ import { Company, Job } from './db.js'
 
 export const resolvers = {
   Query: {
-    job: (_root, { id }) => {
-      return Job.findById(id)
-    },
+    job: (_root, { id }) => Job.findById(id),
     jobs: () => Job.findAll(),
+
+    // (2)
+    company: (_root, { id }) => Company.findById(id),
   },
 
   Job: {
-    company: (job) => {
-      return Company.findById(job.companyId)
-    },
+    company: (job) => Company.findById(job.companyId),
   },
 }

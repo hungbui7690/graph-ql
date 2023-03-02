@@ -1,12 +1,17 @@
 type Query {
-  # (1) resolvers
   job(id: ID!): Job
   jobs: [Job!]
+
+  # (1b)
+  company(id: ID!): Company
 }
 
 type Company {
   id: ID!
   name: String!
+
+  # (1a)
+  description: String
 }
 
 type Job {

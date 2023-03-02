@@ -2,7 +2,22 @@ import { request, gql } from 'graphql-request'
 
 const GRAPHQL_URL = 'http://localhost:9000/graphql'
 
-// (1) go to JobDetail.js
+// (4) go to CompanyDetails component
+export async function getCompany(id) {
+  const query = gql`
+    query ($id: ID!) {
+      company(id: $id) {
+        id
+        name
+        description
+      }
+    }
+  `
+  const variables = { id }
+  const { company } = await request(GRAPHQL_URL, query, variables)
+  return company
+}
+
 export async function getJob(id) {
   const query = gql`
     query ($id: ID!) {
@@ -17,8 +32,6 @@ export async function getJob(id) {
       }
     }
   `
-
-  // if we hover on request() below, we will see that the 3rd params is variables
   const variables = { id }
   const { job } = await request(GRAPHQL_URL, query, variables)
   return job
