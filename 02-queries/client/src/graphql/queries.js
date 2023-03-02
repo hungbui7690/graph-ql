@@ -2,7 +2,6 @@ import { request, gql } from 'graphql-request'
 
 const GRAPHQL_URL = 'http://localhost:9000/graphql'
 
-// (4) go to CompanyDetails component
 export async function getCompany(id) {
   const query = gql`
     query ($id: ID!) {

@@ -1,6 +1,5 @@
 /*
-  (1) /graphql/queries.js
-    > work on Company query
+
 
 */
 

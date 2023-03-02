@@ -1,13 +1,13 @@
 /*
-  EXERCISE: COMPANY QUERY
-  - now, in the detail job page, when we click on the link of company > error
-  - we need to fix it
-  > we need company name & description
+  COMPANY-JOBS ASSOCIATION
 
-  (1) schema
-  (2) resolver
-  (3) test in Apollo Client
-  (4) React > graphql/queries.js
+  Client:
+  (1) CompanyDetails.js
+
+  Server:
+  (2) Schema
+  (4) Resolvers
+  (5) Test in Apollo Client
 
 */
 
